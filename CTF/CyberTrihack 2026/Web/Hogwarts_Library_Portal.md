@@ -1,3 +1,10 @@
+Hogwarts Library Portal
+Author: @JayZee (IU)
+
+The Restricted Section of the Hogwarts Library holds ancient archival records, but the web portal's security checkpoint blocks standard student credentials.
+Access the web portal instance provided by the platform and bypass the portal's access controls to gain entry into the Restricted Section.
+
+
 The website given:
 <img width="1855" height="878" alt="image" src="https://github.com/user-attachments/assets/d7e4ec69-d4c5-4867-bb51-4fe5fbb8b9a7" />
 
