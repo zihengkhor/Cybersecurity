@@ -1,4 +1,4 @@
-**Hogwarts Library Portal  **
+**Hogwarts Library Portal**  
 Author: @JayZee (IU)
 
 The Restricted Section of the Hogwarts Library holds ancient archival records, but the web portal's security checkpoint blocks standard student credentials. 
