@@ -1,2 +1,2 @@
 # Cybersecurity
-This repository contains my cybersecurity projects
+This repository records all my cybersecurity learning stuffs.
