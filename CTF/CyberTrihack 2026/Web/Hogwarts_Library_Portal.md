@@ -14,6 +14,6 @@ The website given:
 -  encrypt it using base64 format: "cm9sZT1oZWFkbWFzdGVy", paste it back to the session cookies
 
 <img width="1853" height="876" alt="image" src="https://github.com/user-attachments/assets/89f90959-9b3a-4161-bdaa-1ed8dcb2d321" />
--  we found our flag after refreshing the website
+We found our flag after refreshing the website
 
 -  Flag: TriHack26{4l0h0m0r4_byp455_5ucc355}
