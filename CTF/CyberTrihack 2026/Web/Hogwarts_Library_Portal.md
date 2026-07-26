@@ -7,11 +7,11 @@ The website given:
 <img width="1022" height="352" alt="image" src="https://github.com/user-attachments/assets/8e981e05-c5e0-4267-a323-622c1b22bd47" />
 
 -  "cm9sZT1zdHVkZW50" is encrypted using base64 format
--  decrypted format: role=student
+-  Decrypted format: role=student
 
--  hint: Only the Headmaster is authorized to view the Restricted Section.
--  we rename the string into "role=headmaster"
--  encrypt it using base64 format: "cm9sZT1oZWFkbWFzdGVy", paste it back to the session cookies
+-  Hint: Only the Headmaster is authorized to view the Restricted Section.
+-  We rename the string into "role=headmaster"
+-  Encrypt it using base64 format: "cm9sZT1oZWFkbWFzdGVy", paste it back to the session cookies
 
 <img width="1853" height="876" alt="image" src="https://github.com/user-attachments/assets/89f90959-9b3a-4161-bdaa-1ed8dcb2d321" />
 We found our flag after refreshing the website
