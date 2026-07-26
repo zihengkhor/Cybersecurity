@@ -13,7 +13,7 @@ The website given:
 
 <img width="1022" height="352" alt="image" src="https://github.com/user-attachments/assets/8e981e05-c5e0-4267-a323-622c1b22bd47" />
 
--  "cm9sZT1zdHVkZW50" is encrypted using base64 format
+-  The session cookie "cm9sZT1zdHVkZW50" is encrypted using base64 format
 -  Decrypted format: role=student
 
 -  Hint: Only the Headmaster is authorized to view the Restricted Section.
