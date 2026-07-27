@@ -24,8 +24,8 @@ if __name__ == "__main__":
     print(f"Ciphertext (hex): {ciphertext.hex()}\n")  
 
 
-This is an AES-ECB encryption algorithm python code.  
-The key is generated using a timestamp
+-  This is an AES-ECB encryption algorithm python code.  
+-  The key is generated using a timestamp
 
 [message.txt](https://github.com/user-attachments/files/30418662/message.txt)
 
@@ -36,5 +36,5 @@ Since the hint provides the ciphertext in hex format and the timestamp,
 the timestamp can be subbed in to decode the ciphertext using same algorithm in encryption.py
 
 
-<https://github.com/zihengkhor/Cybersecurity/blob/main/CTF/picoCTF/Crypto/Timestamped_Secrets.py>
+<https://github.com/zihengkhor/Cybersecurity/blob/main/CTF/picoCTF/Crypto/Timestamped_Secrets.py>  
 Flag: picoCTF{sa3S_sEc9t_fbbd0fb7}
