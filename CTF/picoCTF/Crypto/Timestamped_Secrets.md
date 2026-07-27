@@ -36,4 +36,5 @@ Since the hint provides the ciphertext in hex format and the timestamp,
 the timestamp can be subbed in to decode the ciphertext using same algorithm in encryption.py
 
 
+<https://github.com/zihengkhor/Cybersecurity/blob/main/CTF/picoCTF/Crypto/Timestamped_Secrets.py>
 Flag: picoCTF{sa3S_sEc9t_fbbd0fb7}
