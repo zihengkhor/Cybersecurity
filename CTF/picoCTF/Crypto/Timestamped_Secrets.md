@@ -29,8 +29,8 @@ if __name__ == "__main__":
 
 [message.txt](https://github.com/user-attachments/files/30418662/message.txt)
 
-Hint: The encryption was done around 1770242615 UTC
-Ciphertext (hex): 24823b2b2d104b36ad2078cafc8d98f22488e78df83b29f507d9b910ad51a464
+Hint: The encryption was done around 1770242615 UTC  
+Ciphertext (hex): 24823b2b2d104b36ad2078cafc8d98f22488e78df83b29f507d9b910ad51a464  
 
 Since the hint provides the ciphertext in hex format and the timestamp,  
 the timestamp can be subbed in to decode the ciphertext using same algorithm in encryption.py
