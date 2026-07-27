@@ -9,12 +9,12 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad  
 
 def encrypt(plaintext: str, timestamp: int) -> str:  
-      timestamp = int(time.time())  
-      key = sha256(str(timestamp).encode()).digest()[:16]  
-      cipher = AES.new(key, AES.MODE_ECB)  
-      padded = pad(plaintext.encode(), AES.block_size)  
-      ciphertext = cipher.encrypt(padded)  
-      return ciphertext.hex()  
+      &ensp;timestamp = int(time.time())  
+      &ensp;key = sha256(str(timestamp).encode()).digest()[:16]  
+      &ensp;cipher = AES.new(key, AES.MODE_ECB)  
+      &ensp;padded = pad(plaintext.encode(), AES.block_size)  
+      &ensp;ciphertext = cipher.encrypt(padded)  
+      &ensp;return ciphertext.hex()  
 
 if __name__ == "__main__":  
   
