@@ -9,12 +9,12 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad  
 
 def encrypt(plaintext: str, timestamp: int) -> str:  
-      &ensp;timestamp = int(time.time())  
-      &ensp;key = sha256(str(timestamp).encode()).digest()[:16]  
-      &ensp;cipher = AES.new(key, AES.MODE_ECB)  
-      &ensp;padded = pad(plaintext.encode(), AES.block_size)  
-      &ensp;ciphertext = cipher.encrypt(padded)  
-      &ensp;return ciphertext.hex()  
+&emsp;timestamp = int(time.time())  
+&emsp;key = sha256(str(timestamp).encode()).digest()[:16]  
+&emsp;cipher = AES.new(key, AES.MODE_ECB)  
+&emsp;padded = pad(plaintext.encode(), AES.block_size)  
+&emsp;ciphertext = cipher.encrypt(padded)  
+&emsp;return ciphertext.hex()  
 
 if __name__ == "__main__":  
   
@@ -34,5 +34,6 @@ Ciphertext (hex): 24823b2b2d104b36ad2078cafc8d98f22488e78df83b29f507d9b910ad51a4
 
 Since the hint provides the ciphertext in hex format and the timestamp,  
 the timestamp can be subbed in to decode the ciphertext using same algorithm in encryption.py
+
 
 Flag: picoCTF{sa3S_sEc9t_fbbd0fb7}
