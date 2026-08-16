@@ -56,53 +56,55 @@ nmap -sV -SS -T5 10.48.176.164
 
 **How I found it:**
 ```bash
-nmap -sV -SS -T5 10.48.176.164
+smbclient -L //10.48.176.164/ -N -p 445
 ```
+
+**Screenshot:**  
+
+<img width="1033" height="199" alt="image" src="https://github.com/user-attachments/assets/7cb4b7b4-9c59-4adc-9357-162767f40fec" />
+
+### Question 2.2
+**Question:** Once you're connected, list the files on the share. What is the file can you see?
+
+**Answer:** `log.txt`
+
+**How I found it:**
+```bash
+smbclient //10.48.176.164/anonymous -N -p 445
+```
+
+**Screenshot:**  
+
+<img width="622" height="150" alt="image" src="https://github.com/user-attachments/assets/e8ed4c0c-620c-4255-b5a2-fee4e2bdaf7f" />
+
+### Question 2.3
+**Question:** What port is FTP running on?
+
+**Answer:** `21`
+
+### Question 2.4
+**Question:** In our case, port 111 is access to a network file system. Lets use nmap to enumerate this.
+
+nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 10.48.176.164
+
+What mount can we see?
+
+**Answer:** `/var`
+
+**How I found it:**
+```bash
+nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 10.48.176.164
+```
+
+**Screenshot:**  
+
+<img width="617" height="471" alt="image" src="https://github.com/user-attachments/assets/a596b557-15b9-47ac-a82d-619f336a67ba" />
 
 ---
 
 ## 3. Task 3
 
-### Enumeration
-```bash
-# Check current user
-whoami
-id
-
-# Check sudo permissions
-sudo -l
-
-# Check SUID binaries
-find / -perm -4000 2>/dev/null
-
-# Check cron jobs
-cat /etc/crontab
-ls -la /etc/cron.d/
-
-# Check kernel version
-uname -a
-```
-
-### Privilege Escalation Vector
-**Method:** [e.g., SUID binary exploitation / Kernel exploit / Sudo misconfiguration / PATH hijacking]
-
-**Steps:**
-```bash
-# Step 1
-<command>
-
-# Step 2
-<command>
-```
-
-**Proof of Root / Admin:**
-```bash
-whoami
-# Output: root
-```
-
-**Screenshot:**
-![Root Shell](screenshots/03-root.png)
+### 
 
 ---
 
