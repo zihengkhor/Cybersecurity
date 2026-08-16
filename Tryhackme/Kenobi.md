@@ -13,8 +13,7 @@
 2. [Initial Access / Exploitation](#2-initial-access--exploitation)
 3. [Privilege Escalation](#3-privilege-escalation)
 4. [Flags](#4-flags)
-5. [Questions & Answers](#5-questions--answers)
-6. [Lessons Learned](#6-lessons-learned)
+
 
 ---
 
@@ -23,7 +22,7 @@
 ### 1.1 Host Discovery
 ```bash
 # Ping sweep to confirm target is alive
-ping -c 4 <TARGET_IP>
+ping -c 4 10.48.176.164
 ```
 **Output:**
 ```
