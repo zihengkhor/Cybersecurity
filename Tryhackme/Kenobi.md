@@ -22,7 +22,7 @@
 ### Question 1.1
 **Question:** Scan the machine with nmap, how many ports are open?
 
-**Answer:** `ANSWER_HERE`
+**Answer:** `7`
 
 **How I found it:**
 ```bash
