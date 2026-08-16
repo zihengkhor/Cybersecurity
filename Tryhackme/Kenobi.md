@@ -10,9 +10,9 @@
 
 ## Table of Contents
 1. [Task 1](#1-Task-1)
-2. [Initial Access / Exploitation](#2-initial-access--exploitation)
-3. [Privilege Escalation](#3-privilege-escalation)
-4. [Flags](#4-flags)
+2. [Task 2](#2-Task-2)
+3. [Task 3](#3-Task-3)
+4. [Task 4](#4-Task-4)
 
 
 ---
