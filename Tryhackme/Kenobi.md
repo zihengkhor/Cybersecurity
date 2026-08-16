@@ -9,7 +9,7 @@
 ---
 
 ## Table of Contents
-1. [Reconnaissance](#1-reconnaissance)
+1. [Task 1](#1-task1)
 2. [Initial Access / Exploitation](#2-initial-access--exploitation)
 3. [Privilege Escalation](#3-privilege-escalation)
 4. [Flags](#4-flags)
@@ -18,7 +18,7 @@
 
 ---
 
-## 1. Reconnaissance
+## 1. Task 1
 
 ### 1.1 Host Discovery
 ```bash
