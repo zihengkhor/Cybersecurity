@@ -42,6 +42,7 @@ nmap -sV -SS -T5 10.48.176.164
 | 2049 | nfs | rpc #100003 |
 
 **Screenshot:**  
+
 <img width="767" height="289" alt="image" src="https://github.com/user-attachments/assets/ba5a1632-d36e-45df-9657-dbb69f79bd28" />
 
 ---
