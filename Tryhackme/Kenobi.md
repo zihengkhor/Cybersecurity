@@ -1,10 +1,10 @@
 # [Room Name] — TryHackMe Writeup
-**Difficulty:** [Easy / Medium / Hard]  
+**Difficulty:** Easy  
 **Platform:** TryHackMe  
 **Room URL:** https://tryhackme.com/room/[room-name]  
-**Date Completed:** DD/MM/YYYY  
-**Time Taken:** X hours  
-**OS:** [Linux / Windows]
+**Date Completed:** 16/08/2026  
+**Time Taken:** 1.5 hours  
+**OS:** Linux
 
 ---
 
