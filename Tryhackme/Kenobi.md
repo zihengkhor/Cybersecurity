@@ -20,7 +20,7 @@
 ## 1. Task 1
 
 ### Question 1.1
-**Question:** [Scan the machine with nmap, how many ports are open?]
+**Question:** Scan the machine with nmap, how many ports are open?
 
 **Answer:** `ANSWER_HERE`
 
