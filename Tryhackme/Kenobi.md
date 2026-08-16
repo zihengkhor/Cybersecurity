@@ -26,91 +26,41 @@
 
 **How I found it:**
 ```bash
-<command>
+nmap -sV -SS -T5 10.48.176.164
 ```
 
-### 1.2 Port Scanning
-```bash
-# Quick scan — top 1000 ports
-sudo nmap -sS <TARGET_IP>
-
-# Full port scan — all 65535 ports
-sudo nmap -p- <TARGET_IP> -oN nmap-all-ports.txt
-
-# Detailed service scan on found ports
-sudo nmap -sV -sC -O -p <PORT1,PORT2,PORT3> <TARGET_IP> -oN nmap-detailed.txt
-```
 **Open Ports Found:**
 
 | Port | Service | Version |
 |:---:|:---|:---|
-| 22 | SSH | OpenSSH X.X |
-| 80 | HTTP | Apache X.X |
-| 445 | SMB | Samba X.X |
+| 21 | FTP | ProFTPD 1.3.5 |
+| 22 | SSH | OpenSSH 8.2 |
+| 80 | HTTP | Apache 2.4.41 |
+| 111 | rpcbind | rpc #100000 |
+| 139 | SMB | Samba 4 |
+| 445 | SMB | Samba 4 |
+| 2049 | nfs | rpc #100003 |
 
 **Screenshot:**
-![Nmap Output](screenshots/01-nmap.png)
+<img width="767" height="289" alt="image" src="https://github.com/user-attachments/assets/ba5a1632-d36e-45df-9657-dbb69f79bd28" />
 
-### 1.3 Web Enumeration (if HTTP/HTTPS found)
+---
+
+## 2. Task 2
+
+### Question 2.1
+**Question:** Using the nmap command above, how many shares have been found?
+
+**Answer:** `3`
+
+**How I found it:**
 ```bash
-# Directory brute-forcing
-gobuster dir -u http://<TARGET_IP> -w /usr/share/wordlists/dirb/common.txt -o gobuster.txt
-
-# Or with ffuff
-ffuf -u http://<TARGET_IP>/FUZZ -w /usr/share/wordlists/dirb/common.txt
-```
-**Interesting Directories Found:**
-- `/admin`
-- `/login`
-- `/backup`
-
-### 1.4 SMB Enumeration (if port 445 found)
-```bash
-enum4linux -a <TARGET_IP>
-smbclient -L //<TARGET_IP>
+nmap -sV -SS -T5 10.48.176.164
 ```
 
 ---
 
-## 2. Initial Access / Exploitation
-
-### Vulnerability Identified
-**Name:** [e.g., Unauthenticated Remote Code Execution in X]  
-**CVE:** [CVE-XXXX-XXXX] (if applicable)  
-**Port:** [e.g., 80]  
-**Service:** [e.g., Apache / PHP]
-
-### Exploitation Steps
-```bash
-# Step 1: [What you did]
-<command here>
-
-# Step 2: [What you did]
-<command here>
-```
-
-**Or via Metasploit:**
-```bash
-msfconsole
-msf6 > use exploit/[path/to/exploit]
-msf6 exploit(...) > set RHOSTS <TARGET_IP>
-msf6 exploit(...) > set LHOST <YOUR_IP>
-msf6 exploit(...) > set LPORT 4444
-msf6 exploit(...) > exploit
-```
-
-**Proof of Access:**
-```bash
-whoami
-# Output: [user / www-data / etc]
-```
-
-**Screenshot:**
-![Shell Obtained](screenshots/02-shell.png)
-
----
-
-## 3. Privilege Escalation
+## 3. Task 3
 
 ### Enumeration
 ```bash
@@ -155,131 +105,4 @@ whoami
 
 ---
 
-## 4. Flags
-
-### User Flag
-```bash
-cat /home/<user>/user.txt
-# or
-cat /home/<user>/Desktop/user.txt
-```
-**Flag:** `THM{...}`
-
-### Root Flag
-```bash
-cat /root/root.txt
-# or
-cat /root/Desktop/root.txt
-# or
-cat /root/flag.txt
-```
-**Flag:** `THM{...}`
-
----
-
-## 5. Questions & Answers
-
-### Question 1
-**Question:** [Paste the exact question from TryHackMe]
-
-**Answer:** `ANSWER_HERE`
-
-**How I found it:**
-```bash
-# Command used to find the answer
-<command>
-```
-**Output:**
-```
-<relevant output showing the answer>
-```
-
----
-
-### Question 2
-**Question:** [Paste the exact question from TryHackMe]
-
-**Answer:** `ANSWER_HERE`
-
-**How I found it:**
-```bash
-<command>
-```
-**Output:**
-```
-<relevant output>
-```
-
----
-
-### Question 3
-**Question:** [Paste the exact question from TryHackMe]
-
-**Answer:** `ANSWER_HERE`
-
-**How I found it:**
-```bash
-<command>
-```
-**Output:**
-```
-<relevant output>
-```
-
----
-
-### Question 4
-**Question:** [Paste the exact question from TryHackMe]
-
-**Answer:** `ANSWER_HERE`
-
-**How I found it:**
-```bash
-<command>
-```
-**Output:**
-```
-<relevant output>
-```
-
----
-
-### Question 5
-**Question:** [Paste the exact question from TryHackMe]
-
-**Answer:** `ANSWER_HERE`
-
-**How I found it:**
-```bash
-<command>
-```
-**Output:**
-```
-<relevant output>
-```
-
----
-
-## 6. Lessons Learned
-
-| # | Lesson |
-|---|--------|
-| 1 | [e.g., Always check for anonymous SMB shares first] |
-| 2 | [e.g., SUID binaries are a common privesc vector on Linux] |
-| 3 | [e.g., Version numbers in banners are gold — always note them] |
-| 4 | [e.g., Check `sudo -l` before trying kernel exploits] |
-
-**What I would do differently next time:**
-- [e.g., Take screenshots at EVERY step, not just at the end]
-- [e.g., Document commands as I run them, not from memory later]
-
-**Tools used:**
-- Nmap
-- Gobuster / ffuf
-- enum4linux
-- Metasploit
-- [Any other tools]
-
----
-
-*Writeup by: [Your Name] | GitHub: [github.com/yourname]*
+## 4. Task 4
