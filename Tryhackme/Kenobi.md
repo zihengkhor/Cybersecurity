@@ -19,16 +19,15 @@
 
 ## 1. Task 1
 
-### 1.1 Host Discovery
+### Question 1.1
+**Question:** [Scan the machine with nmap, how many ports are open?]
+
+**Answer:** `ANSWER_HERE`
+
+**How I found it:**
 ```bash
-# Ping sweep to confirm target is alive
-ping -c 4 10.48.176.164
+<command>
 ```
-**Output:**
-```
-64 bytes from <TARGET_IP>: icmp_seq=1 ttl=64 time=0.5 ms
-```
-**Target is up.**
 
 ### 1.2 Port Scanning
 ```bash
